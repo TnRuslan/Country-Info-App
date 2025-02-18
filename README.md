@@ -15,7 +15,7 @@ First, run the development server:
 
 ```bash
 yarn install
-# or
+# and
 yarn serve
 ```
 
@@ -28,7 +28,7 @@ First, run the development server:
 
 ```bash
 yarn install
-# or
+# and
 yarn dev
 ```
 
