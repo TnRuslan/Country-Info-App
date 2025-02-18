@@ -28,7 +28,9 @@ First, run the development server:
 
 ```bash
 yarn install
+
 # and
+```bash
 yarn dev
 ```
 
