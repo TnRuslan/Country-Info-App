@@ -29,10 +29,12 @@ export default function CountryPage({ params }: CountryPageProps) {
 	return (
 		<div className="min-h-screen flex flex-col justify-between p-8 bg-gray-900 text-white">
 			<div className="text-center mb-8">
-				<h1 className="text-3xl font-semibold mb-4">
+				<h2 className="text-3xl font-semibold mb-6">
 					Country Information
-				</h1>
-				<LinkItem href="/" text="Home Page" />
+				</h2>
+				<div className="max-w-[300px] mx-auto">
+					<LinkItem href="/" text="Home Page" />
+				</div>
 			</div>
 
 			<div className="flex-grow container mx-auto">
@@ -41,7 +43,7 @@ export default function CountryPage({ params }: CountryPageProps) {
 						<h2 className="text-2xl font-semibold text-center">
 							{countryName}
 						</h2>
-						<div className="flex justify-center overflow-hidden">
+						<div className="flex justify-center overflow-hidden max-w-[400px] mx-auto">
 							<Image
 								src={data.flag}
 								alt={data.countryCode}
@@ -56,7 +58,7 @@ export default function CountryPage({ params }: CountryPageProps) {
 							<h3 className="text-xl font-semibold mb-8">
 								Border Countries
 							</h3>
-							<ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+							<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 								{data.borders.map((country: IBorderCountry) => (
 									<li key={country.countryCode}>
 										<LinkItem
@@ -75,9 +77,9 @@ export default function CountryPage({ params }: CountryPageProps) {
 				)}
 			</div>
 
-			<div className="text-center py-4 bg-gray-800 mt-8 rounded-lg container mx-auto">
+			<footer className="text-center py-4 bg-gray-800 mt-8 rounded-lg container mx-auto">
 				<p>&copy; 2025 Country Info App.</p>
-			</div>
+			</footer>
 		</div>
 	);
 }
