@@ -15,6 +15,7 @@ export default class CountriesService {
 	}
 	async fetchAvailableCountries() {
 		const { data } = await this.dateNagerApi.get('/AvailableCountries');
+		await new Promise((resolve) => setTimeout(resolve, 1000));
 		return data;
 	}
 
