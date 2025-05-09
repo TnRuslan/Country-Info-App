@@ -1,3 +1,5 @@
+'use client';
+
 import {
 	CartesianGrid,
 	Line,
@@ -13,14 +15,9 @@ interface PopulationChartProps {
 	data: IPopulation[];
 }
 
-export default function PopulationChart({
-	data,
-}: PopulationChartProps): React.ReactNode {
+export default function PopulationChart({ data }: PopulationChartProps) {
 	return (
-		<div className="bg-gray-800 rounded-lg p-4">
-			<h3 className="text-xl font-semibold mb-4 text-center">
-				Population Chart
-			</h3>
+		<>
 			<ResponsiveContainer
 				width="100%"
 				height={300}
@@ -56,6 +53,6 @@ export default function PopulationChart({
 					<Tooltip />
 				</LineChart>
 			</ResponsiveContainer>
-		</div>
+		</>
 	);
 }
